@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  body {
+  padding: 20px;
+  padding-left: 150px;
+}
+
+.tr {
+  width: 50px;
+  border-radius: 10px;
+}
+
+.th {
+font-size: 25px;
+font-weight: bold;
+}
+
+.td {
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+  border-color: #b2b1c48c;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(161 161 187 / 35%);
+}
+
+.ta {
+  border-radius: 4px;
+  width: 130px;
+  height: 30px;
+  border-color: #b2b1c48c;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(161 161 187 / 35%);
+  border: 0;
+  border-bottom: 1px solid #999;
+}
+
+
+.t {
+  width: 100px;
+  height: 30px;
+  background-color: #262686bf;
+  border-color: #262686bf ;
+  color: white;
+  border-radius: 4px;
+}
+
+.aa {
+  background-color: #262686bf;
+  padding-left: 10px;
+  width: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 10px;
+  color: #ffffffc9; 
+  height: 60px;
+  font-size: 50px;
+}
+
+.aa:hover{
+  overflow: visible;
+  width: 550px;
+  transition: all 2s;
+}
+ </style>
+
+</head>
+<body style="background-color:#9999998c;">
+
+  <h1 class="aa"> MAKE YOUR ORDER </h1>
+  
+  <table>
+    <thead>
+      <tr class="th">
+          <th> items </th>
+          <th> unit price </th>     
+          <th> unit price </th>
+          <th> unit price </th>
+          <th> calculate </th>
+          <th> value </th>
+      </tr>
+    </thead>
+
+      <tbody>
+        <tr class="tr">
+                <td><input class="ta" type="text" name="hamburger" value="hamburger" style="color: rgb(82, 75, 177);"></td>
+                <td><input class="td" id="col1" type="number"></td>
+                <td><input class="td" id="col2" type="number"></td>
+                <td><input class="td" id="col3" type="number"></td>
+                <td> <button class="t" onclick="calculate()">Calculate</button> </td><br>
+                <td>  RESULT: <input class="td" id="result1"> </td>
+        </tr>
+      </tbody>
+
+      <tbody>
+        <tr>    
+              <td> <input class="ta" type="text" name="pizza" value="pizza" style="color: rgb(82, 75, 177);"></td>
+              <td><input class="td" id="col4" type="number"></td>
+              <td><input class="td" id="col5" type="number"></td>
+              <td><input class="td" id="col6" type="number"></td>
+              <td> <button class="t" onclick="calculat()">Calculate</button> </td><br>
+              <td>  RESULT: <input class="td" id="result2"> </td>
+        </tr>
+      </tbody>
+  
+      <tbody>
+          <tr> 
+              <td> <input class="ta" type="text" name="negrisco" value="negrisco" style="color: rgb(82, 75, 177);"> </td>
+              <td><input class="td" id="col7" type="number"></td>
+              <td><input class="td" id="col8" type="number"></td>
+              <td><input class="td" id="col9" type="number"></td>
+              <td> <button class="t" onclick="calcula()">Calculate</button> </td><br>
+              <td>  RESULT: <input class="td" id="result3"> </td>
+          </tr>
+      </tbody>
+    
+      <tbody>
+        <tr>
+              <td> <input class="ta" type="text" name="chicken" value="chicken" fixed style="color: rgb(82, 75, 177) ;"> </td>
+              <td><input class="td" id="col10" type="number"></td>
+              <td><input class="td" id="col11" type="number"></td>
+              <td><input class="td" id="col12" type="number"></td>
+              <td> <button class="t" onclick="calcul()">Calculate</button> </td><br>
+              <td>  RESULT: <input class="td" id="result4"> </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+
+  <script>
+    function calculate() {
+  var my1 = document.getElementById('col1').value;
+  var my2 = document.getElementById('col2').value;
+  var my3 = document.getElementById('col3').value;
+  var result = document.getElementById('result1');
+  var myResult = parseInt(my1) + parseInt(my2) + parseInt(my3); 
+  result.value = myResult;}
+
+  function calculat() {
+  var my1 = document.getElementById('col4').value;
+  var my2 = document.getElementById('col5').value;
+  var my3 = document.getElementById('col6').value;
+  var result = document.getElementById('result2');
+  var myResult = parseInt(my1) + parseInt(my2) + parseInt(my3); 
+  result.value = myResult;}
+
+  function calcula() {
+  var my1 = document.getElementById('col7').value;
+  var my2 = document.getElementById('col8').value;
+  var my3 = document.getElementById('col9').value;
+  var result = document.getElementById('result3');
+  var myResult = parseInt(my1) + parseInt(my2) + parseInt(my3); 
+  result.value = myResult;}
+
+  function calcul() {
+  var my1 = document.getElementById('col10').value;
+  var my2 = document.getElementById('col11').value;
+  var my3 = document.getElementById('col12').value;
+  var result = document.getElementById('result4');
+  var myResult = parseInt(my1) + parseInt(my2)  + parseInt(my3); 
+  result.value = myResult;}
+  
+
+
+  </script>
+</body>
+</html>
